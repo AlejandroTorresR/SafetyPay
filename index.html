@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+    <title>SafetyPay</title>
+    <link rel="stylesheet" href="build/styles.css">
+  </head>
+  <body>
+  
+<header>
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <figure>
+            <img src="img/Logo.png" class="img-responsive" alt="Logotipo">
+          </figure>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="li-first" id="line-r"><a href="#">COMO FUNCIONA</a></li>
+              <li class="li-first"><a href="#" >AYUDA</a></li>
+              <li class="active"><a href="#">CHAT</a></li>
+               <li class="dropdown">
+              <a href="#" class="dropdown-toggle ac-color" data-toggle="dropdown"><img src="img/bandera.png" alt="Bandera México"> MEX <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="divider"></li>
+                <li><a href="#"><img src="img/bandera_3.png" alt="Bandera USA"> USA </a></li>
+                <li class="divider"></li>
+                <li class="divider"></li>
+                <li><a href="#"><img src="img/bandera_4.png" alt="Bandera Colombia"> Colombia </a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</header>
+         
+<div class="container theme-showcase" style="max-width:855px;">
+<!-- /Detalle de la Compra =============================================
+========================================================================-->
+  <div class="col-md-4 col-sm-4">
+    <div class="center-block">
+      <div class="panel panel-default">
+        <h1 class="panel-heading panel-title" style="background-color:#ffffff"><img src="img/mobileShop.png" class="img-thumbnail center-block" style="border:0px"></h1>
+          <div class="panel-body">
+          <div>Reservación:<br><b class="detalle">001-002120521</b></div><div id="separador"></div>
+          <div>Monto de la compra:<br><b class="detalle">US$ 121.40 <br>Dolares Americanos</b></div><div id="separador"></div>
+          <div>Total en moneda local:<br><b class="detalle">$1,585.69 <br>Pesos Mexicanos</b></div><div id="separador"></div>
+          <div style="width:100%; height:3px; background-color:#dddddd; margin-bottom:10px"></div>
+            <h6><i>
+	            <ul style="margin-left:-15px; color:#A9A9A9">   	
+	              <li>Procesamos tu pago al instante.</li>
+	              <li>No necesitas registro alguno.</li>
+	              <li>Eliminamos fraude y robo de identidad.</li>
+	            </ul>
+            </i></h6>
+          <br>
+          <div>
+          <img src="img/version.png" class="center-block"><br>
+          <button type="button" class="btn btn-primary center-block btn-group-justified">Ir al comercio</button>            
+          </div>
+          <div class="onlyMobile">
+          <button type="button" class="btn btn-primary btn-group-justified" style="margin-top:10px">PAGAR</button>
+          </div>
+          </div>
+      </div>          
+    </div>
+  </div> 
+<!-- /Detalle de compra =============================================-->
+     
+     
+  <div class="col-md-8 col-sm-8 hideMobile">
+    <div>      
+      <div class="panel panel-default">
+<!-- /Forma de Pago =============================================
+=================================================================-->
+        <div class="step1">
+        <h1 class="panel-heading panel-title">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="width:50px;"><img src="img/paso_1.png"></td>
+            <td>SELECCIONAR FORMA DE PAGO</td>
+          </tr>
+        </table>
+        </h1>       
+          <div class="panel-body">
+            <div class="panel-body" >
+              <div class="radio pull-left radioActive"  style="margin-right:30px;">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  onclick="$('.btnPagoEfectivo').css({'display':'none'});$('.btnPagoInternet').css({'display':'block'});" checked>
+                  Banca por Internet
+                </label>
+              </div>
+              <div class="radio pull-left panel-body" style="width:80px;">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" onclick="$('.btnPagoInternet').css({'display':'none'});$('.btnPagoEfectivo').css({'display':'block'});">
+                  Efectivo
+                </label>
+              </div>
+            </div>
+            <div>
+              <h5>Safety Pay le permite pagar su compra en la moneda de su preferencia.</h5><div id="separador"></div>
+            </div>
+            <h5 class="pull-left">Moneda de pago:</h5>
+            <select class="form-control">
+                  <option value>US $121.40 Dólares Americanos</option>
+                  <option value>MX $1,585.69 Pesos Mexicanos</option>
+            </select><br><br>
+            <div class="text-center"><b class="detalle">$1,585.69 Pesos Mexicanos</b></div><br><br>          
+            <div class="text-center btnPagoEfectivo">
+                  <button type="button" class="btn btn-primary btn-group-justified " onclick="$('.step1').css({'display':'none'});$('.step2').css({'display':'block'});$('.pagoEfectivo').css({'display':'block'});$('.pagoInternet').css({'display':'none'});">CONTINUAR</button>
+            </div>
+            <div class="text-center btnPagoInternet">
+                  <button type="button" class="btn btn-primary btn-group-justified" onclick="$('.step1').css({'display':'none'});$('.step2').css({'display':'block'});$('.pagoInternet').css({'display':'block'});$('.pagoEfectivo').css({'display':'none'});">CONTINUAR</button>
+            </div>              
+          </div>
+        </div>
+<!-- /Forma de Pago =============================================-->              
+                              
+<!-- /Seleccionar Banco =========================================-->
+          <div class="step2" style="display:none">
+            <h1 class="panel-heading panel-title">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="width:50px;"><img src="img/paso_2.png"></td>
+                  <td>SELECCIONAR BANCO</td>
+                </tr>
+              </table>
+            </h1>
+            <div class="panel-body">
+              <div class="pagoInternet"> <!--/Pago por internet-->
+              	<div class="col-xs-12 col-sm- col-md- col-lg-">
+	            	<br>
+	              <p>Seleccionar banco:</p>
+	            </div>
+              	<div class="row row-banks">
+	                <div class="wth col-xs-2 col-sm- col-md- col-lg-">
+	                  <figure>
+	                    <img src="img/bank_banorte.png" class="bank" alt="Banorte">
+	                  </figure>
+	                </div>
+	                <div class="wth col-xs-2 col-sm-2 col-md-3 col-lg-">
+	                  <figure>
+	                    <img src="img/bank_bbva.png" class="bank" alt="BBVA Bancomer">
+	                  </figure>
+	                </div>
+	                <div class="wth col-xs-2 col-sm- col-md- col-lg-">
+	                  <figure>
+	                    <img src="img/bank_santander.png" class="bank" alt="Santander">
+	                  </figure>
+	                </div>
+	                <div class="wth col-xs-2 col-sm- col-md- col-lg-">
+	                  <figure>
+	                    <img src="img/bank_scotia.png" class="bank" alt="Skotia Bank">
+	                  </figure>
+	                </div>
+	                <div class="wth col-xs-2 col-sm- col-md- col-lg-">
+	                  <figure>
+	                    <img src="img/bank_banorte.png" class="bank" alt="Banorte">
+	                  </figure>
+	                </div>	                
+	              </div>
+	            <div class="row row-banks">
+					<div class="col-xs-12 col-sm- col-md- col-lg-">
+						<br>
+						<p>Banco seleccionado:</p>
+					</div>
+	                <div class="col-xs-2 col-sm- col-md- col-lg-">
+	                  <figure class="cont-img">
+	                    <img src="img/bank_bbva.png" class="img-responsive-" alt="BBVA Bancomer">
+	                  </figure>
+	                </div>
+	                <div class="col-xs-10 col-sm- col-md- col-lg- pull-right">
+	                    <p class="font-size  ">La banca electrónica de <span class="ctexto">BBVA Bancomer </span>
+	                    permite realizar pagos de Lunes a Domingo de 
+	                    7:00 AM a 7:00 PM.</p>  
+	                </div>
+				</div>
+				<br>
+				<div class="alert alert-warning war">
+					<div class="row">
+					  <div class="col-xs-12 col-sm- col-md- col-lg-">
+					      <div class="col-xs-2 col-sm- col-md- col-lg-">
+					        <figure>
+					          <img src="img/icon_info.png" class="" alt="Icono info">
+					        </figure>
+					      </div>
+					      <div class="col-xs-10 col-sm- col-md- col-lg-">
+					        <p class="font-size">
+					        Al continuar será dirigido a la banca en línea de 
+					        <span class="ctexto"> BBVA Bancomer </span> para completar su pago.
+					        </p>
+					      </div>
+					  </div>
+					</div>
+					<a href="#" class="alert-link"></a>
+				</div>               
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <button type="button" class="btn btn-primary pull-left btn-group-justified btnsmobil" onclick="$('.step2').css({'display':'none'});$('.step1').css({'display':'block'});">REGRESAR</button>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">  
+                      <button type="button" class="btn btn-primary pull-right btn-group-justified btnsmobil" onclick="$('.step2').css({'display':'none'});$('.step3').css({'display':'block'});">CONTINUAR</button>
+                    </div>
+                  </div>	
+              </div> <!--/Pago por internet-->
+<!--=============================================================================--> 
+              <div class="pagoEfectivo"><!--/Pago Efectivo--> 
+                <div>
+                  <p>Total a Pagar</p>
+                  <p><b class="detalle">$1,585.69 Pesos Mexicanos</b></p>
+                  <p>Seleccionar banco:</p>
+                  <div class="bancos">
+                    <div class="pull-left bankSelect defBank" style="cursor:pointer" onclick="$('.lugarPago').text('BBVA Bancomer');"><img src="img/bank_bbva.png" width="52" height="52" margin:"0px" opacity:"1"></div>
+                    <div class="pull-left bankSelect" style="cursor:pointer" onclick="$('.lugarPago').text('Santander');"><img src="img/bank_santander.png" width="52" height="52"></div>
+                    <div class="pull-left bankSelect" style="cursor:pointer" onclick="$('.lugarPago').text('ScotiaBank');"><img src="img/bank_scotia.png" width="52" height="52"></div>
+                    <div class="pull-left bankSelect" style="cursor:pointer" onclick="$('.lugarPago').text('Banorte');"><img src="img/bank_banorte.png" width="52" height="52"></div>
+                    <div class="pull-left bankSelect" style="cursor:pointer" onclick="$('.lugarPago').text('BBVA Bancomer');"><img src="img/bank_bbva.png" width="52" height="52"></div>
+                    <div class="pull-left bankSelect" style="cursor:pointer" onclick="$('.lugarPago').text('Santander');"><img src="img/bank_santander.png" width="52" height="52"></div>
+                  </div>
+                  <div class="infoPago">                   
+                      <h3>Información para pagar:</h3>                   
+                      <p>Lugar de pago:</p>
+                      <p class="lugarPago"><span class="ctexto">BBVA Bancomer<span></p>                      
+                      <p>Convenio:</p>
+                      <p>12345</p>                       
+                      <p>Número de Transacción:</p>
+                      <p>1234567890123</p>    
+                      <p>Monto a Pagar:</p>
+                      <p>$ 1, 585.69</p>
+                      <div class="wrapIco">
+                        <div class="btnImprimir"></div>
+                        <div class="btnMail"></div>
+                      </div>    
+                  </div>
+                </div>
+                <div style="width:100%; height:10px; background-color:#ebe16e; float:left; margin-top:10px;"></div>
+                <div class="info panel-body pagoEfectivo" style="float:left; margin-bottom:20px; height:auto;">
+                  <div class="pull-left" style="width:30px; height:auto; margin:10px 0 10px 0;"><img src="img/icon_info.png" width="20" height="20" alt=""/></div>
+                  <p>1. El pago debe ser completado hasta el Jueves 10 de octubre 6:35 pm (hora México central)</p>
+                  <p style="margin-left:30px">2. Al efectuar el pago indicar que es la cuenta de SafetyPay del Perú SAC y NO a la cuenta de Volaris.</p>
+                </div>
+                  <button type="button" class="btn btn-primary btn-group-justified" onclick="$('.step2').css({'display':'none'});$('.step1').css({'display':'block'});">REGRESAR</button>
+              </div><!--/Pago Efectivo-->   
+            </div>
+          </div>
+<!-- /Seleccionar Banco =================================================-->          
+
+
+<!-- /Recibo de Compra =============================================
+====================================================================-->          
+          <div class="step3" style="display:none">
+             <h1 class="panel-heading panel-title">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="width:50px;"><img src="img/paso_2.png"></td>
+                  <td>RECIBO DE COMPRA</td>
+                </tr>
+              </table>
+            </h1>
+            <div class="panel-body">
+              <div>Banco:<br><b class="lugarPago detalle"><span class="ctexto">BBVA Bancomer<span></b></div><div id="separador"></div>
+              <div>Número de confirmación:<br><b class="detalle">456123</b></div><div id="separador"></div>
+              <div>Fecha:<br><b class="detalle">01-Enero-2014</b></div><div id="separador"></div>
+              <div>Comercio:<br><b class="detalle">Mobile Shop</b></div><div id="separador"></div>
+              <div>Número de transacción:<br><b class="detalle">12345</b></div><div id="separador"></div>
+              <div>Monto Pagado:<br><b class="detalle">$1,585.69 Pesos Mexicanos</b></div><div id="separador"></div><br> 
+				<div class="row">
+              		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              			<button type="button" class="btn btn-primary pull-left btn-group-justified btnsmobil">Enviar por E-mail</button>
+              		</div>
+              		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">                    	
+              			<button type="button" class="btn btn-primary pull-right btn-group-justified btnsmobil" id="print">Imprimir</button>
+              		</div>
+              	</div>
+            </div>
+          </div>
+<!-- /Recibo de Compra =================================================--> 
+      </div>
+    </div>
+  </div>
+</div>     
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="build/script.js"></script>
+</body>
+</html>
